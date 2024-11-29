@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Data Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Health Data Submission</h1>
+        <form action="/result" method="POST">
+            <!-- Numeric inputs -->
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="Age" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" id="bmi" name="BMI" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin">Insulin Levels:</label>
+                <input type="number" id="insulin" name="InsulinLevels" required>
+            </div>
+            <div class="form-group">
+                <label for="bp">Blood Pressure:</label>
+                <input type="number" id="bp" name="BloodPressure" required>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">Cholesterol Levels:</label>
+                <input type="number" id="cholesterol" name="CholesterolLevels" required>
+            </div>
+            <div class="form-group">
+                <label for="waist">Waist Circumference:</label>
+                <input type="number" id="waist" name="WaistCircumference" required>
+            </div>
+            <div class="form-group">
+                <label for="glucose">Blood Glucose Levels:</label>
+                <input type="number" id="glucose" name="BloodGlucoseLevels" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight Gain During Pregnancy:</label>
+                <input type="number" id="weight" name="WeightGainDuringPregnancy">
+            </div>
+            <div class="form-group">
+                <label for="pancreatic">Pancreatic Health:</label>
+                <input type="number" id="pancreatic" name="PancreaticHealth">
+            </div>
+            <div class="form-group">
+                <label for="pulmonary">Pulmonary Function:</label>
+                <input type="number" id="pulmonary" name="PulmonaryFunction">
+            </div>
+            <div class="form-group">
+                <label for="digestive">Digestive Enzyme Levels:</label>
+                <input type="number" id="digestive" name="DigestiveEnzymeLevels">
+            </div>
+            <div class="form-group">
+                <label for="birth">Birth Weight:</label>
+                <input type="number" id="birth" name="BirthWeight">
+            </div>
+            <div class="form-group">
+                <label for="neurologicalassessments">neurological Assessments:</label>
+                <input type="number" id="neurologicalassessments" name="NeurologicalAssessments">
+            </div>
+
+            <!-- Dropdown and radio inputs -->
+            {% for key, options in {
+                "GeneticMarkers": ["Positive", "Negative"],
+                "Autoantibodies": ["Positive", "Negative"],
+                "FamilyHistory": ["Yes", "No"],
+                "EnvironmentalFactors": ["Present", "Absent"],
+                "PhysicalActivity": ["low", "moderate", "high"],
+                "DietaryHabits": ["Healthy", "Unhealthy"],
+                "Ethnicity": ["high risk", "low risk"],
+                "SocioeconomicFactors": ["low", "moderate", "high"],
+                "SmokingStatus": ["smoker", "non-smoker"],
+                "AlcoholConsumption": ["low", "moderate", "high"],
+                "GlucoseToleranceTest": ["normal", "abnormal"],
+                "HistoryOfPCOS": ["Yes", "No"],
+                "PreviousGestationalDiabetes": ["Yes", "No"],
+                "PregnancyHistory": ["normal", "complicated"],
+                "CysticFibrosisDiagnosis": ["Yes", "No"],
+                "SteroidUseHistory": ["Yes", "No"],
+                "GeneticTesting": ["Positive", "Negative"],
+                "LiverFunctionTests": ["normal", "abnormal"],
+                "UrineTest": ["Protein Present", "Normal", "Glucose Present", "Ketones Present"],
+                "EarlyOnsetSymptoms": ["Yes", "No"]
+            }.items() %}
+            <div class="form-group">
+                <label for="{{ key }}">{{ key.replace('_', ' ') }}:</label>
+                <select id="{{ key }}" name="{{ key }}" required>
+                    {% for option in options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endfor %}
+
+            <!-- Submit button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

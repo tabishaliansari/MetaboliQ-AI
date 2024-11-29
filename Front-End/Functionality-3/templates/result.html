@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Diabetes Prediction Result</h1>
+
+        <!-- Map prediction value to diabetes type -->
+        {% set diabetes_types = {
+            0: 'Cystic Fibrosis-Related Diabetes (CFRD)',
+            1: 'Gestational Diabetes',
+            2: 'LADA',
+            3: 'MODY',
+            4: 'Neonatal Diabetes Mellitus (NDM)',
+            5: 'Prediabetic',
+            6: 'Secondary Diabetes',
+            7: 'Steroid-Induced Diabetes',
+            8: 'Type 1 Diabetes',
+            9: 'Type 2 Diabetes',
+            10: 'Type 3c Diabetes (Pancreatogenic Diabetes)',
+            11: 'Wolcott-Rallison Syndrome',
+            12: 'Wolfram Syndrome'
+        } %}
+
+        <p>Your predicted type of diabetes is: <strong>{{ diabetes_types[prediction] }}</strong></p>
+        
+        <a href="/" class="submit-btn">Go Back</a>
+    </div>
+</body>
+</html>
