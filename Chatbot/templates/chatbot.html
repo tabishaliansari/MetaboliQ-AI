@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METABOLiQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+</head>
+<body>
+    <div class="chatbox">
+        <h2>METABOLiQ</h2>
+        <div class="chat-history">
+            {% if user_input %}
+                <div class="chat-message user">
+                    <p><strong>User:</strong> {{ user_input }}</p>
+                </div>
+            {% endif %}
+            {% if response %}
+                <div class="chat-message bot">
+                    <p><strong>Bot:</strong> {{ response }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <form method="POST" action="/">
+            <input type="text" name="user_input" placeholder="Ask me something..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
