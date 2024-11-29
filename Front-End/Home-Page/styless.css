@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background: #0077cc;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background: #005a99;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Medical Factors Button in Navigation */
+nav .btn-medical {
+    color: #fff;
+    background: #0077cc; /* Blue background for Medical Factors button */
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+nav .btn-medical:hover {
+    background: #005a99; /* Darker shade on hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('assests/backgroungimg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    background: #0077cc;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero .btn-primary:hover {
+    background: #005a99;
+}
+
+/* Overview Section */
+.overview {
+    padding: 2rem 1rem;
+    background: #fff;
+    text-align: center;
+}
+
+.overview h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.overview p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: #f1f1f1;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 15rem;
+}
+
+.stat p:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0077cc;
+}
+
+/* Features Section */
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 15rem;
+}
+
+.feature-item img {
+    width: 160px;
+    height: 160px;
+}
+
+.feature-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #0077cc;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item {
+    margin: 1rem 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+footer h3, footer h4 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .statistics, .features-container, .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
