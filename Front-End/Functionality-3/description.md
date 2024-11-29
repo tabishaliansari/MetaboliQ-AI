@@ -11,5 +11,5 @@ project/
 ├── static/  
 │   └── style.css  
 │  
-├── decision_tree_model.joblib  
+├── random_forest_model.joblib  
 └── app.py  
