@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction - Page 1</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction - Step 1</h1>
+        <form action="/form_page_2" method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="Age" required>
+            </div>
+            <div class="form-group">
+                <label for="sex">Sex (M/F)</label>
+                <input type="text" id="sex" name="Sex" maxlength="1" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI (0-60)</label>
+                <input type="number" id="bmi" name="BMI" step="0.1" min="0" max="60" required>
+            </div>
+            <div class="form-group">
+                <label for="smoker">Smoker (Yes/No)</label>
+                <input type="text" id="smoker" name="Smoker" required>
+            </div>
+            <div class="form-group">
+                <label for="highbp">HighBP (Yes/No)</label>
+                <input type="text" id="highbp" name="HighBP" required>
+            </div>
+            <div class="form-group">
+                <label for="highchol">HighChol (Yes/No)</label>
+                <input type="text" id="highchol" name="HighChol" required>
+            </div>
+            <div class="form-group">
+                <label for="stroke">Stroke (Yes/No)</label>
+                <input type="text" id="stroke" name="Stroke" required>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+</body>
+</html>
