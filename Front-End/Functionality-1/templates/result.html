@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Pastel blue background */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #1976d2;
+        }
+        .result-container {
+            display: inline-block;
+            text-align: left;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div class="result-container">
+        <p><strong>Year:</strong> {{ year }}</p>
+        <p><strong>Population:</strong> {{ population }}</p>
+        <p><strong>Number of Diabetic Patients:</strong> {{ diabetic_patients }}</p>
+        <p><strong>Number of Male Diabetic Patients:</strong> {{ male_diabetic_patients }}</p>
+        <p><strong>Number of Female Diabetic Patients:</strong> {{ female_diabetic_patients }}</p>
+        <p><strong>Pollution Level (AQI):</strong> {{ pollution }}</p>
+        <p><strong>Health Index:</strong> {{ health_index }}</p>
+        <hr>
+        <p><strong>Predicted Number of Diabetic Patients:</strong> {{ prediction }}</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
