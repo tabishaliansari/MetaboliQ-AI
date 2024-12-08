@@ -2,6 +2,8 @@ import random
 import re
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
+from sklearnex import patch_sklearn
+patch_sklearn()
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
