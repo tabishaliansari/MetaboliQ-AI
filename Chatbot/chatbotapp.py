@@ -9,7 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import os
 
 
-FAQ_FILE_PATH = r"C:\Users\khushal\Desktop\completenew\chatbot_dataset.txt" 
+FAQ_FILE_PATH = r"chatbot_dataset.txt" 
 
 
 app = Flask(__name__)
